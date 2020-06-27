@@ -3,6 +3,7 @@
 #include "ui/fps_counter.c"
 #include "ui/grid.c"
 #include "environments/world_1.c"
+#include "characters/knight.c"
 
 
 int main(int argc, char** argv){
@@ -10,6 +11,7 @@ int main(int argc, char** argv){
     SetTargetFPS(60);
 
     world_1_load();
+    knight_load();
 
     while(!WindowShouldClose()){
         // Inputs
@@ -25,6 +27,7 @@ int main(int argc, char** argv){
         BeginDrawing();
             ClearBackground(WHITE);
             world_1_show(screen_ratio);
+            knight_show(screen_ratio);
             grid_show(screen_width, screen_height, screen_cell_size);
 #if defined(DEBUG)
             DrawText("DEBUG MODE", screen_width/2 - (4*24), 24, 24, RED);
@@ -34,6 +37,7 @@ int main(int argc, char** argv){
     }
 
     world_1_unload();
+    knight_unload();
 
     CloseWindow();
     return 0;
