@@ -25,10 +25,10 @@ int main(int argc, char** argv){
         BeginDrawing();
             ClearBackground(WHITE);
             world_1_show(screen_ratio);
-            DrawFPS(fps_counter_x_get(screen_width, 24), fps_counter_y_get(24));
             grid_show(screen_width, screen_height, screen_cell_size);
 #if defined(DEBUG)
             DrawText("DEBUG MODE", screen_width/2 - (4*24), 24, 24, RED);
+            fps_counter_show(screen_width, 24);
 #endif
         EndDrawing();
     }
