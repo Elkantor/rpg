@@ -1,4 +1,3 @@
-#include <stdio.h>
 void grid_show(int in_screen_width, int in_screen_height, int in_cell_size){
     // raws
     for(int i = 1; i < (in_screen_height/in_cell_size)+1; ++i){
