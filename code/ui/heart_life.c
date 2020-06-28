@@ -11,7 +11,6 @@ void heart_life_unload(){
     UnloadTexture(heart_life_texture);
 }
 
-#include <stdio.h>
 void heart_life_show(float in_percent){
     int y = 20;
     int x = 20;
